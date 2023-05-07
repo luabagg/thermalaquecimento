@@ -1,38 +1,48 @@
-import type { V2_MetaFunction } from "@remix-run/react";
+import { Link, V2_MetaFunction } from "@remix-run/react";
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "New Remix App" }];
+  return [{ title: "Thermal Aquecimento - Aquecimento de Casas e Piscinas" }];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <section id="hero">
+      <div>
+        <div>
+          <div>
+            <ul>
+              <li>
+                <div>
+                  <h1>Conheça a <span>Thermal</span>. 🔥 Aquecimento de qualidade para seu lar
+                  </h1>
+
+                  <h3>Oferecemos as melhores soluções de aquecimento no mercado, atuando a mais de 5 anos em todo Rio Grande do Sul. Não espere mais para desfrutar do conforto que merece - entre em contato conosco hoje mesmo.</h3>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <h1>Somos uma empresa dedicada em oferecer as melhores soluções de aquecimento disponíveis no mercado.</h1>
+
+                  <h3>Para nós, o cliente é prioridade. Conheça nossos projetos e solicite um orçamento personalizado abaixo.</h3>
+                </div>
+              </li>
+
+              <li>
+                <div>
+                  <h1>Veja mais sobre <Link to="/services" title="services"><span>nossos serviços</span></Link> ou solicite um <Link to="/contact" title="contact us"><span>orçamento</span></Link>.</h1>
+
+                  <h3>Explore as soluções de aquecimento que temos disponíveis para você. Estaremos prontos para ajudá-lo a encontrar a melhor solução para suas necessidades.</h3>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="more">
+        <Link to="/services">Saiba mais<i className="fas fa-angle-down"></i></Link>
+      </div>
+    </section>
   );
 }
